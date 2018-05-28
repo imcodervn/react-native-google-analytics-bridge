@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 def DEFAULT_GOOGLE_PLAY_SERVICES_VERSION    = "+"
 
@@ -22,5 +23,9 @@ dependencies {
   def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : DEFAULT_GOOGLE_PLAY_SERVICES_VERSION
     implementation 'com.facebook.react:react-native:+'
     implementation "com.google.android.gms:play-services-analytics:12.0.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:+"
 
+}
+repositories {
+    mavenCentral()
 }
